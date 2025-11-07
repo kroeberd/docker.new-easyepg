@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        arch: [amd64, arm64, arm/v7]
+        arch: [amd64, arm64]
 
     steps:
       - name: Checkout repository
@@ -34,9 +34,6 @@ jobs:
               ;;
             arm64)
               echo "DOCKERFILE=Dockerfile.arm64v8" >> $GITHUB_ENV
-              ;;
-            arm/v7)
-              echo "DOCKERFILE=Dockerfile.arm32v7" >> $GITHUB_ENV
               ;;
           esac
 
