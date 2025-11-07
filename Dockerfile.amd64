@@ -1,4 +1,4 @@
-FROM arm64v8/debian:bullseye AS build
+FROM amd64v8/debian:bullseye AS build
 
 LABEL maintainer="Bastian Kleinschmidt <debaschdi@googlemail.com>" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
