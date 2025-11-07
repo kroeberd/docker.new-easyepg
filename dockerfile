@@ -12,14 +12,14 @@ RUN apt-get update && apt-get install -y \
 # Arbeitsverzeichnis
 WORKDIR /easyepg
 
-# Repo reinziehen (kroeberd Fork)
+# Repo klonen
 RUN git clone https://github.com/kroeberd/docker.new-easyepg.git . 
 
-# Standard-Volume-Verzeichnisse für Daten & XML-Ausgabe
+# Daten-Ordner erstellen
 RUN mkdir -p /easyepg/xml
 
 # Port
 EXPOSE 4000
 
-# Startscript
-CMD ["bash", "easyepg.sh"]
+# Startkommando korrigiert
+CMD ["bash", "run.sh"]
